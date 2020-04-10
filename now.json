@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "build": "quasar build",
+    "deploy": "now"
+  }
+}
