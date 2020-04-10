@@ -2,8 +2,9 @@
   "version": 2,
   "builds": [
     {
-      "src": "/",
+      "src": "quasar.conf.js",
       "use": "@now/node"
     }
-  ]
+  ],
+  "routes": [{ "src": "/", "dest": "index.js" }]
 }
