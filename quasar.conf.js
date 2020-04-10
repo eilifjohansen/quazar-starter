@@ -49,7 +49,7 @@ module.exports = function(ctx) {
     build: {
       scopeHoisting: true,
       vueRouterMode: 'history',
-      distDir: ctx.mode.spa ? 'public' : null
+      distDir: 'public'
     },
 
     // Full list of options: https://quasar.dev/quasar-cli/quasar-conf-js#Property%3A-devServer
