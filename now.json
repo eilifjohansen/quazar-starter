@@ -5,6 +5,5 @@
       "src": "quasar.conf.js",
       "use": "@now/node"
     }
-  ],
-  "routes": [{ "src": "/", "dest": "/dist/spa" }]
+  ]
 }
