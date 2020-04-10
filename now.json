@@ -1,6 +1,9 @@
 {
-  "scripts": {
-    "build": "quasar build",
-    "deploy": "now"
-  }
+  "version": 2,
+  "builds": [
+    {
+      "src": "quasar.conf.js",
+      "use": "@now/node"
+    }
+  ]
 }
