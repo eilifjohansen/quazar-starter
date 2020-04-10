@@ -6,5 +6,5 @@
       "use": "@now/node"
     }
   ],
-  "routes": [{ "src": "/", "dest": "/public" }]
+  "routes": [{ "src": "/", "dest": "/dist/spa" }]
 }
