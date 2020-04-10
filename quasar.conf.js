@@ -63,20 +63,16 @@ module.exports = function(ctx) {
 
     // https://quasar.dev/quasar-cli/developing-ssr/configuring-ssr
     ssr: {
-      pwa: true
+      pwa: false
     },
 
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
-      workboxOptions: {
-        skipWaiting: true,
-        clientsClaim: true
-      },
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},
       manifest: {
         name: 'Quasar App',
-        short_name: 'Quasar-PWA',
+        short_name: 'Quasar-PWA1',
         description: 'Best PWA App in town!',
         display: 'standalone',
         orientation: 'portrait',
