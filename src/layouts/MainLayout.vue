@@ -21,7 +21,6 @@
       <q-list>
         <q-item-label header class="text-grey-8">Essential Links</q-item-label>
         <HomeLink v-for="link in homeLinks" :key="link.title" v-bind="link"/>
-        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link"/>
       </q-list>
     </q-drawer>
 
@@ -50,13 +49,13 @@ export default {
         {
           title: 'Home',
           caption: 'Back to home',
-          icon: 'public',
+          icon: 'home',
           link: '/'
         },
         {
           title: 'About',
-          caption: 'github.com/quasarframework',
-          icon: 'public',
+          caption: 'About the project',
+          icon: 'help',
           link: '/about'
         }
       ],
