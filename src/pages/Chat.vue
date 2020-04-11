@@ -15,7 +15,7 @@
         <q-form @submit="sendMessage" class="full-width">
           <q-input v-model="newMessage" bg-color="white" outlined rounded label="Message" dense>
             <template v-slot:after>
-              <q-btn round dense flat type="submit" color="white" icon="send"/>
+              <q-btn @click="sendMessage" round dense flat color="white" icon="send"/>
             </template>
           </q-input>
         </q-form>
