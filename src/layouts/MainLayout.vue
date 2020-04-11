@@ -57,6 +57,12 @@ export default {
           caption: 'About the project',
           icon: 'help',
           link: '/about'
+        },
+        {
+          title: 'Chat',
+          caption: 'Chat application',
+          icon: 'chat',
+          link: '/chat'
         }
       ],
       essentialLinks: [
