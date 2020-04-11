@@ -71,9 +71,9 @@ module.exports = function(ctx) {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},
       manifest: {
-        name: 'Quasar App',
-        short_name: 'Quasar-PWA1',
-        description: 'Best PWA App in town!',
+        name: 'Covidu',
+        short_name: 'Covidu',
+        description: 'Covidu - The coronavirus chatbot!',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',

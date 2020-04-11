@@ -11,15 +11,13 @@
           aria-label="Menu"
         />
 
-        <q-toolbar-title>Quasar App</q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-toolbar-title>Covidu</q-toolbar-title>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered content-class="bg-grey-1">
       <q-list>
-        <q-item-label header class="text-grey-8">Essential Links</q-item-label>
+        <q-item-label header class="text-grey-8">Menu</q-item-label>
         <HomeLink v-for="link in homeLinks" :key="link.title" v-bind="link"/>
       </q-list>
     </q-drawer>
@@ -53,16 +51,16 @@ export default {
           link: '/'
         },
         {
-          title: 'About',
-          caption: 'About the project',
-          icon: 'help',
-          link: '/about'
-        },
-        {
           title: 'Chat',
-          caption: 'Chat application',
+          caption: 'Covidu Chat',
           icon: 'chat',
           link: '/chat'
+        },
+        {
+          title: 'About',
+          caption: 'About Covidu',
+          icon: 'help',
+          link: '/about'
         }
       ],
       essentialLinks: [
