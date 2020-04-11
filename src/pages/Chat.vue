@@ -7,7 +7,7 @@
         :key="message.text"
         :name="message.from"
         :text="[message.text]"
-        :sent="message.from == 'Covidu' ? true : false"
+        :sent="message.from == 'Me' ? true : false"
       />
     </div>
     <q-footer elevated>
@@ -37,7 +37,7 @@ export default {
         },
         {
           text: 'Norway',
-          from: 'you'
+          from: 'Me'
         },
         {
           text: 'Just a moment...',
@@ -50,7 +50,7 @@ export default {
     sendMessage() {
       this.messages.push({
         text: this.newMessage,
-        from: 'Covidu'
+        from: 'Me'
       })
     }
   }
