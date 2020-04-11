@@ -52,7 +52,7 @@ export default {
         },
         {
           title: 'Chat',
-          caption: 'Covidu Chat',
+          caption: 'Chat with Covidu',
           icon: 'chat',
           link: '/chat'
         },
