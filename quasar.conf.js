@@ -68,6 +68,12 @@ module.exports = function(ctx) {
 
     // https://quasar.dev/quasar-cli/developing-pwa/configuring-pwa
     pwa: {
+      workboxOptions: {
+        exclude: [
+          /\.html$/, // I don't know why I need to change this matching pattern from string to RegEx to get it work.
+          '/statics/ionicons-cheatsheet/'
+        ]
+      },
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},
       manifest: {
