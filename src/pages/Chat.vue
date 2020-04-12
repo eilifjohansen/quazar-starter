@@ -19,7 +19,15 @@
     <q-footer elevated>
       <q-toolbar>
         <q-form @submit="sendMessage" class="full-width">
-          <q-input v-model="newMessage" bg-color="white" outlined rounded label="Message" dense>
+          <q-input
+            v-model="newMessage"
+            id="mymessage"
+            bg-color="white"
+            outlined
+            rounded
+            label="Message"
+            dense
+          >
             <template v-slot:after>
               <q-btn @click="sendMessage" round dense flat color="white" icon="send"/>
             </template>
@@ -58,6 +66,7 @@ export default {
         userid: '123'
       }
 
+      this.newMessage = ''
       /*fetch('https://hook.integromat.com/x8bu17plms1trtjtppdryxo6k02bqy9o')
         .then(resp => resp.text())
         .then(function(data) {
