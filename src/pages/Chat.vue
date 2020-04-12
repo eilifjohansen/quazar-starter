@@ -4,7 +4,7 @@
     <div class="q-pa-md column col justify-end">
       <q-chat-message
         v-for="message in messages"
-        :key="message.text"
+        :key="message.id"
         :name="message.from"
         :text="[message.text]"
         :sent="message.from == 'Me' ? true : false"
@@ -38,16 +38,9 @@ export default {
       newMessage: '',
       messages: [
         {
+          id: 1,
           text:
             'Hi, what country would you like to check<br> the latest coronavirus stats in?',
-          from: 'Covidu'
-        },
-        {
-          text: 'Norway',
-          from: 'Me'
-        },
-        {
-          text: 'Just a moment...',
           from: 'Covidu'
         }
       ]
@@ -59,7 +52,55 @@ export default {
         text: this.newMessage,
         from: 'Me'
       })
+
+      const payload = {
+        location: this.newMessage,
+        webhook: 'https://webhook.site/0878e958-df57-4a07-8f59-b43a4d888609',
+        userid: '123'
+      }
+
+      /*fetch('https://hook.integromat.com/x8bu17plms1trtjtppdryxo6k02bqy9o')
+        .then(resp => resp.text())
+        .then(function(data) {
+          console.log(data)
+        })
+        .catch(error => console.log(error))
+     */
+      fetch('https://hook.integromat.com/dtfbvlarirwglzhfsav0inoshn9kggxs', {
+        method: 'POST',
+        // mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(payload)
+      })
+        .then(response => {
+          console.log('Status', response.status)
+
+          response.text().then(res => console.log(res))
+
+          this.messages.push({
+            text: response.status,
+            from: 'Covidu'
+          }) 
+        })
+        .then(result => {
+         
+       
+        })
     }
+
+    // getResponse() {
+    //   setTimeout(() => {
+    //     fetch('https://hook.integromat.com/dtfbvlarirwglzhfsav0inoshn9kggxs')
+    //       .then(response => {
+    //         return response.json()
+    //       })
+    //       .then(data => {
+    //         console.log('resultatet er', data)
+    //       })
+    //   }, 500)
+    // }
   }
 }
 </script>
