@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex column">
+  <q-page ref="pageChat" class="page-chat flex column">
     <div class="q-pa-md column col justify-end">
       <q-chat-message
         v-for="message in messages"
@@ -21,6 +21,7 @@
         <q-form @submit="sendMessage" class="full-width">
           <q-input
             v-model="newMessage"
+            ref="newMessage"
             id="mymessage"
             bg-color="white"
             outlined
@@ -66,7 +67,8 @@ export default {
         userid: '123'
       }
 
-      this.newMessage = ''
+      //this.newMessage = ''
+
       /*fetch('https://hook.integromat.com/x8bu17plms1trtjtppdryxo6k02bqy9o')
         .then(resp => resp.text())
         .then(function(data) {
@@ -89,10 +91,29 @@ export default {
           })
         })
       })
+
+      this.clearMessage()
+    },
+    clearMessage() {
+      this.newMessage = ''
+      this.$refs.newMessage.focus()
+    },
+    scrollToBottom() {
+      let pageChat = this.$refs.pageChat.$el
+      setTimeout(() => {
+        window.scrollTo(0, pageChat.scrollHeight)
+      }, 20)
+    }
+  },
+  watch: {
+    messages: function(val) {
+      if (Object.keys(val).length) {
+        this.scrollToBottom()
+        setTimeout(() => {
+          this.showMessages = true
+        }, 200)
+      }
     }
   }
 }
 </script>
-
-<style>
-</style>
