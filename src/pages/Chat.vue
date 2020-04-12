@@ -1,6 +1,5 @@
 <template>
   <q-page class="flex column">
-    <q-banner class="bg-grey-4 text-center">Covidu is offline.</q-banner>
     <div class="q-pa-md column col justify-end">
       <q-chat-message
         v-for="message in messages"
@@ -73,34 +72,15 @@ export default {
           'Content-Type': 'application/json'
         },
         body: JSON.stringify(payload)
-      })
-        .then(response => {
-          console.log('Status', response.status)
-
-          response.text().then(res => console.log(res))
-
+      }).then(response => {
+        response.text().then(result => {
           this.messages.push({
-            text: response.status,
+            text: result.replace(/\n/g, '<br />'),
             from: 'Covidu'
-          }) 
+          })
         })
-        .then(result => {
-         
-       
-        })
+      })
     }
-
-    // getResponse() {
-    //   setTimeout(() => {
-    //     fetch('https://hook.integromat.com/dtfbvlarirwglzhfsav0inoshn9kggxs')
-    //       .then(response => {
-    //         return response.json()
-    //       })
-    //       .then(data => {
-    //         console.log('resultatet er', data)
-    //       })
-    //   }, 500)
-    // }
   }
 }
 </script>
