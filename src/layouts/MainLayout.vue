@@ -99,13 +99,12 @@
       <div style="padding: 10px">
 
         <p>Hi, I'm Covidu, the Coronavirus Updates Chatbot.</p>
-        <p>Name a country, and I will get you the latest Coronavirus statistics that I can get hold of. You may also subscribe to daily updates.</p>
+        <p>Name a country, and I will get you the latest Coronavirus statistics that I can get hold of.</p>
 
-        <p>Data source: <a
+        <p>My data source is: <a
             href="https://coronavirus.jhu.edu/"
             target="_blank"
-          >Johns Hopkins CSSE</a>.
-          Covidu is a non profit project developed in Norway.</p>
+          >Johns Hopkins CSSE</a>.</p>
 
       </div>
       <!-- drawer content -->

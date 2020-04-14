@@ -86,18 +86,8 @@ export default {
         userid: '123'
       }
 
-      //this.newMessage = ''
-
-      /*fetch('https://hook.integromat.com/x8bu17plms1trtjtppdryxo6k02bqy9o')
-        .then(resp => resp.text())
-        .then(function(data) {
-          console.log(data)
-        })
-        .catch(error => console.log(error))
-     */
       fetch('https://hook.integromat.com/dtfbvlarirwglzhfsav0inoshn9kggxs', {
         method: 'POST',
-        // mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json'
         },
@@ -115,7 +105,7 @@ export default {
     },
     clearMessage () {
       this.newMessage = ''
-      this.$refs.newMessage.focus()
+      // this.$refs.newMessage.focus()
     },
     scrollToBottom () {
       let pageChat = this.$refs.pageChat.$el
