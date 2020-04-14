@@ -1,7 +1,11 @@
 <template>
-  <q-page ref="pageChat" class="page-chat flex column">
+  <q-page
+    ref="pageChat"
+    class="page-chat flex column"
+  >
     <div class="q-pa-md column col justify-end">
       <q-chat-message
+        class="text-body2"
         v-for="message in messages"
         :key="message.id"
         :name="message.from"
@@ -10,7 +14,10 @@
         text-color="white"
         bg-color="primary"
       >
-        <template v-slot:avatar v-if="message.from == 'Covidu' ? true : false">
+        <template
+          v-slot:avatar
+          v-if="message.from == 'Covidu' ? true : false"
+        >
           <img
             class="q-message-avatar q-message-avatar--sent"
             src="statics\app-logo-128x128.png"
@@ -20,7 +27,10 @@
     </div>
     <q-footer>
       <q-toolbar>
-        <q-form @submit="sendMessage" class="full-width">
+        <q-form
+          @submit="sendMessage"
+          class="full-width"
+        >
           <q-input
             v-model="newMessage"
             ref="newMessage"
@@ -50,7 +60,7 @@
 
 <script>
 export default {
-  data() {
+  data () {
     return {
       newMessage: '',
       messages: [
@@ -64,7 +74,7 @@ export default {
     }
   },
   methods: {
-    sendMessage() {
+    sendMessage () {
       this.messages.push({
         text: this.newMessage,
         from: 'Me'
@@ -103,11 +113,11 @@ export default {
 
       this.clearMessage()
     },
-    clearMessage() {
+    clearMessage () {
       this.newMessage = ''
       this.$refs.newMessage.focus()
     },
-    scrollToBottom() {
+    scrollToBottom () {
       let pageChat = this.$refs.pageChat.$el
       setTimeout(() => {
         window.scrollTo(0, pageChat.scrollHeight)
@@ -115,7 +125,7 @@ export default {
     }
   },
   watch: {
-    messages: function(val) {
+    messages: function (val) {
       if (Object.keys(val).length) {
         this.scrollToBottom()
         setTimeout(() => {
