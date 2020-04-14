@@ -18,7 +18,7 @@
         </template>
       </q-chat-message>
     </div>
-    <q-footer elevated>
+    <q-footer>
       <q-toolbar>
         <q-form @submit="sendMessage" class="full-width">
           <q-input

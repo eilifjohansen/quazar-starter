@@ -2,7 +2,7 @@
   <q-layout view="lHh lpR lFr">
     <q-header class="bg-primary text-white collapse">
       <q-toolbar>
-        <q-btn
+        <q-btn class="only-mobile"
           dense
           flat
           round
@@ -25,7 +25,7 @@
 
     <q-drawer v-model="leftDrawerOpen" show-if-above>
       <q-toolbar class="bg-primary text-white collapse">
-        <!-- <q-btn
+        <!--<q-btn
           dense
           flat
           round
@@ -33,7 +33,6 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />-->
       </q-toolbar>
-      <div></div>
       <!--
       <q-list>
         <HomeLink v-for="link in homeLinks" :key="link.title" v-bind="link" />
@@ -41,6 +40,17 @@
     </q-drawer>
 
     <q-drawer show-if-above v-model="right" side="right">
+              <div class="absolute-top">
+
+          <div class="text-center bg-transparent" style="margin-top: 10px; padding-bottom: 5px;  border-bottom: 1px solid rgba(0, 0, 0, 0.12);">
+            <q-avatar size="106px" class="q-mb-sm">
+              <img  src="statics\app-logo-128x128.png">
+            </q-avatar>
+            <div class="text-center">
+            <div class="text-weight-bold, text-h6" style="margin-top:0px">Covidu</div>
+            </div>
+          </div>
+        </div>
       <!-- drawer content -->
     </q-drawer>
 
@@ -129,5 +139,11 @@ export default {
 .q-page{
  border-left: 1px solid rgba(0, 0, 0, 0.12);
  border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+@media screen and (min-width: 1009px) {
+.only-mobile {
+  display: none;
+}
 }
 </style>
