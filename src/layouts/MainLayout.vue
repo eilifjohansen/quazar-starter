@@ -1,6 +1,6 @@
 <template>
-  <q-layout view="hHh lpR lFr">
-    <q-header elevated class="bg-primary text-white">
+  <q-layout view="lHh lpR lFr">
+    <q-header class="bg-primary text-white collapse">
       <q-toolbar>
         <q-btn
           dense
@@ -11,50 +11,41 @@
         />
 
         <q-toolbar-title>
-          <div class="absolute-center">
-            <q-avatar>
-              <img src="statics\app-logo-128x128.png" />
-            </q-avatar>
-            Covidu
-          </div>
+          <!--<div class="absolute-center">-->
+          <q-avatar>
+            <img src="statics\app-logo-128x128.png" />
+          </q-avatar>
+          Covidu
+          <!-- </div>-->
         </q-toolbar-title>
 
         <q-btn dense flat round icon="info" @click="right = !right" />
       </q-toolbar>
     </q-header>
 
-    <!-- <q-header elevated>
-      <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="left = !left" />
-
-        <q-btn
-          flat
+    <q-drawer v-model="leftDrawerOpen" show-if-above>
+      <q-toolbar class="bg-primary text-white collapse">
+        <!-- <q-btn
           dense
+          flat
           round
-          @click="leftDrawerOpen = !leftDrawerOpen"
           icon="menu"
-          aria-label="Menu"
-        />
-
-        <q-toolbar-title class="absolute-center">Covidu</q-toolbar-title>
-
-        <q-btn dense flat round icon="menu" @click="right = !right" />
+          @click="leftDrawerOpen = !leftDrawerOpen"
+        />-->
       </q-toolbar>
-    </q-header>-->
-
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+      <div></div>
       <!--
       <q-list>
         <HomeLink v-for="link in homeLinks" :key="link.title" v-bind="link" />
       </q-list>-->
     </q-drawer>
 
-    <q-drawer show-if-above v-model="right" side="right" bordered>
+    <q-drawer show-if-above v-model="right" side="right">
       <!-- drawer content -->
     </q-drawer>
 
     <q-page-container>
-      <keep-alive>
+      <keep-alive 
         <router-view />
       </keep-alive>
     </q-page-container>
@@ -133,3 +124,10 @@ export default {
   }
 }
 </script>
+<style lang="stylus">
+
+.q-page{
+ border-left: 1px solid rgba(0, 0, 0, 0.12);
+ border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+</style>
