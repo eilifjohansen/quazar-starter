@@ -1,7 +1,32 @@
 <template>
-  <q-layout view="hHh lpR lFf">
-    <q-header elevated>
+  <q-layout view="hHh lpR lFr">
+    <q-header elevated class="bg-primary text-white">
       <q-toolbar>
+        <q-btn
+          dense
+          flat
+          round
+          icon="menu"
+          @click="leftDrawerOpen = !leftDrawerOpen"
+        />
+
+        <q-toolbar-title>
+          <div class="absolute-center">
+            <q-avatar>
+              <img src="statics\app-logo-128x128.png" />
+            </q-avatar>
+            Covidu
+          </div>
+        </q-toolbar-title>
+
+        <q-btn dense flat round icon="info" @click="right = !right" />
+      </q-toolbar>
+    </q-header>
+
+    <!-- <q-header elevated>
+      <q-toolbar>
+        <q-btn dense flat round icon="menu" @click="left = !left" />
+
         <q-btn
           flat
           dense
@@ -12,20 +37,20 @@
         />
 
         <q-toolbar-title class="absolute-center">Covidu</q-toolbar-title>
-      </q-toolbar>
-    </q-header>
 
-    <q-drawer
-      dark
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-primary"
-    >
-      <q-list dark>
-        <!--<q-item-label header class="text-white">Menu</q-item-label>-->
+        <q-btn dense flat round icon="menu" @click="right = !right" />
+      </q-toolbar>
+    </q-header>-->
+
+    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+      <!--
+      <q-list>
         <HomeLink v-for="link in homeLinks" :key="link.title" v-bind="link" />
-      </q-list>
+      </q-list>-->
+    </q-drawer>
+
+    <q-drawer show-if-above v-model="right" side="right" bordered>
+      <!-- drawer content -->
     </q-drawer>
 
     <q-page-container>
@@ -50,6 +75,7 @@ export default {
 
   data() {
     return {
+      right: false,
       leftDrawerOpen: false,
       homeLinks: [
         {
