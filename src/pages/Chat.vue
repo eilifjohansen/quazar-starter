@@ -67,7 +67,7 @@ export default {
         {
           id: 1,
           text:
-            'Hi, what country would you like to check<br> the latest coronavirus stats in?',
+            'Hi, what country would you like to check the latest coronavirus stats in?',
           from: 'Covidu'
         }
       ]

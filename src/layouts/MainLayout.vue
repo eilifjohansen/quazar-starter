@@ -13,10 +13,7 @@
 
         <q-toolbar-title>
           <!--<div class="absolute-center">-->
-          <q-avatar>
-            <img src="statics\app-logo-128x128.png" />
-          </q-avatar>
-          Covidu
+          Chat with Covidu
           <!-- </div>-->
         </q-toolbar-title>
 
@@ -34,6 +31,7 @@
       v-model="leftDrawerOpen"
       show-if-above
     >
+
       <q-toolbar class="bg-primary text-white collapse">
         <!-- <q-btn
           dense
@@ -42,6 +40,15 @@
           icon="menu"
           @click="leftDrawerOpen = !leftDrawerOpen"
         />-->
+
+        <q-toolbar-title>
+          <!--<div class="absolute-center">-->
+          <q-avatar>
+            <img src="statics\app-logo-128x128.png" />
+          </q-avatar>
+          Covidu
+          <!-- </div>-->
+        </q-toolbar-title>
       </q-toolbar>
 
       <q-list>
