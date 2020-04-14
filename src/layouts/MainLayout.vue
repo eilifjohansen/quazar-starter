@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="hHh lpR lFf">
     <q-header elevated>
       <q-toolbar>
         <q-btn
@@ -11,20 +11,28 @@
           aria-label="Menu"
         />
 
-        <q-toolbar-title>Covidu</q-toolbar-title>
+        <q-toolbar-title class="absolute-center"
+          >Covidu - The coronavirus updates chatbot</q-toolbar-title
+        >
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered content-class="bg-grey-1">
-      <q-list>
-        <q-item-label header class="text-grey-8">Menu</q-item-label>
-        <HomeLink v-for="link in homeLinks" :key="link.title" v-bind="link"/>
+    <q-drawer
+      dark
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      content-class="bg-primary"
+    >
+      <q-list dark>
+        <!--<q-item-label header class="text-white">Menu</q-item-label>-->
+        <HomeLink v-for="link in homeLinks" :key="link.title" v-bind="link" />
       </q-list>
     </q-drawer>
 
     <q-page-container>
       <keep-alive>
-        <router-view/>
+        <router-view />
       </keep-alive>
     </q-page-container>
   </q-layout>

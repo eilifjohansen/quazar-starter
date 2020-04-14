@@ -7,12 +7,17 @@
       img-class="my-custom-image"
       class="rounded-borders"
     >
-      <q-btn to="/chat"
+      <q-btn
+        to="/chat"
         label="Start a chat with Covidu"
         class="absolute-bottom text-subtitle1 text-center"
         color="primary"
       />
     </q-img>
+
+    <q-page-sticky position="bottom-right" :offset="[18, 18]">
+      <q-btn fab icon="chat" to="/chat" color="primary" />
+    </q-page-sticky>
   </q-page>
 </template>
 

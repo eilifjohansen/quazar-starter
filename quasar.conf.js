@@ -79,7 +79,7 @@ module.exports = function(ctx) {
       manifest: {
         name: 'Covidu',
         short_name: 'Covidu',
-        description: 'Covidu - The coronavirus chatbot!',
+        description: 'Covidu - The coronavirus updates chatbot',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
