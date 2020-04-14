@@ -11,7 +11,14 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
-        <q-toolbar-title>
+        <q-toolbar-title class="only-mobile">
+          <q-avatar>
+            <img src="statics\app-logo-128x128.png" />
+          </q-avatar>
+          Covidu
+        </q-toolbar-title>
+
+        <q-toolbar-title class="only-desktop">
           <!--<div class="absolute-center">-->
           Chat with Covidu
           <!-- </div>-->
@@ -54,6 +61,11 @@
       <q-list>
         <HomeLink
           v-for="link in homeLinks"
+          :key="link.title"
+          v-bind="link"
+        />
+        <EssentialLink
+          v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
         />
@@ -134,40 +146,10 @@ export default {
       ],
       essentialLinks: [
         {
-          title: 'Docs',
-          caption: 'quasar.dev',
-          icon: 'school',
-          link: 'https://quasar.dev'
-        },
-        {
-          title: 'Github',
-          caption: 'github.com/quasarframework',
-          icon: 'code',
-          link: 'https://github.com/quasarframework'
-        },
-        {
-          title: 'Discord Chat Channel',
-          caption: 'chat.quasar.dev',
-          icon: 'chat',
-          link: 'https://chat.quasar.dev'
-        },
-        {
-          title: 'Forum',
-          caption: 'forum.quasar.dev',
-          icon: 'record_voice_over',
-          link: 'https://forum.quasar.dev'
-        },
-        {
-          title: 'Twitter',
-          caption: '@quasarframework',
-          icon: 'rss_feed',
-          link: 'https://twitter.quasar.dev'
-        },
-        {
-          title: 'Facebook',
+          title: 'Like us on Facebook',
           caption: '@QuasarFramework',
-          icon: 'public',
-          link: 'https://facebook.quasar.dev'
+          icon: 'link',
+          link: 'https://www.facebook.com/covidu'
         }
       ]
     }
@@ -182,6 +164,12 @@ export default {
 
 @media screen and (min-width: 1009px) {
   .only-mobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1008px) {
+  .only-desktop {
     display: none;
   }
 }
