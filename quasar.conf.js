@@ -82,8 +82,8 @@ module.exports = function(ctx) {
         description: 'Covidu - The coronavirus updates chatbot',
         display: 'standalone',
         orientation: 'portrait',
-        background_color: '#ffffff',
-        theme_color: '#027be3',
+        background_color: '#075e54',
+        theme_color: '#075e54',
         icons: [
           {
             src: 'statics/icons/icon-128x128.png',

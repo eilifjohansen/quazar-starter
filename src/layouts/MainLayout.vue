@@ -11,9 +11,7 @@
           aria-label="Menu"
         />
 
-        <q-toolbar-title class="absolute-center"
-          >Covidu - The coronavirus updates chatbot</q-toolbar-title
-        >
+        <q-toolbar-title class="absolute-center">Covidu</q-toolbar-title>
       </q-toolbar>
     </q-header>
 
