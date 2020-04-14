@@ -53,16 +53,10 @@ export default {
       leftDrawerOpen: false,
       homeLinks: [
         {
-          title: 'Home',
-          caption: 'Back to home',
-          icon: 'home',
-          link: '/'
-        },
-        {
-          title: 'Chat',
+          title: 'Chat with Covidu',
           caption: 'Chat with Covidu',
           icon: 'chat',
-          link: '/chat'
+          link: '/'
         },
         {
           title: 'About',

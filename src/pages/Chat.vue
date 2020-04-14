@@ -7,6 +7,8 @@
         :name="message.from"
         :text="[message.text]"
         :sent="message.from == 'Me' ? true : false"
+        text-color="white"
+        bg-color="primary"
       >
         <template v-slot:avatar v-if="message.from == 'Covidu' ? true : false">
           <img

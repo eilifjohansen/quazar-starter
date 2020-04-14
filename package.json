@@ -1,10 +1,10 @@
 {
-  "name": "quasar-starter-6",
-  "version": "0.0.1",
-  "description": "",
-  "productName": "Quasar App",
-  "cordovaId": "org.cordova.quasar.app",
-  "author": "add.your.email@here.com",
+  "name": "covidu",
+  "version": "0.0.2",
+  "description": "Covidu - The coronavirus updates chatbot",
+  "productName": "Covidu",
+  "cordovaId": "org.cordova.covidu.app",
+  "author": "eilif@inklud.no",
   "private": true,
   "scripts": {
     "start": "quasar dev",
