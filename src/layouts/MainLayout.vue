@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh lpR lFr">
+  <q-layout view="lHh LpR lFr">
     <q-header class="bg-primary text-white collapse">
       <q-toolbar>
         <q-btn
@@ -126,7 +126,7 @@ export default {
           link: '/'
         },
         {
-          title: 'About',
+          title: 'About Covidu',
           caption: 'About Covidu',
           icon: 'help',
           link: '/about'
