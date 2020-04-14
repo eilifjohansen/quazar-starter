@@ -64,6 +64,7 @@
           :key="link.title"
           v-bind="link"
         />
+
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
@@ -100,7 +101,10 @@
         <p>Hi, I'm Covidu, the Coronavirus Updates Chatbot.</p>
         <p>Name a country, and I will get you the latest Coronavirus statistics that I can get hold of. You may also subscribe to daily updates.</p>
 
-        <p>Data source: Johns Hopkins CSSE.
+        <p>Data source: <a
+            href="https://coronavirus.jhu.edu/"
+            target="_blank"
+          >Johns Hopkins CSSE</a>.
           Covidu is a non profit project developed in Norway.</p>
 
       </div>
@@ -136,18 +140,26 @@ export default {
           caption: 'Chat with Covidu',
           icon: 'chat',
           link: '/'
-        },
-        {
-          title: 'About Covidu',
-          caption: 'About Covidu',
-          icon: 'help',
-          link: '/about'
         }
       ],
       essentialLinks: [
         {
+          title: 'Covidu on Messenger',
+          icon: 'link',
+          link: 'https://m.me/covidu'
+        },
+        {
+          title: 'Covidu on Telegram',
+          icon: 'link',
+          link: 'https://t.me/covidu_bot'
+        },
+        {
+          title: 'About the project',
+          icon: 'link',
+          link: 'https://devpost.com/software/covidu'
+        },
+        {
           title: 'Like us on Facebook',
-          caption: '@QuasarFramework',
           icon: 'link',
           link: 'https://www.facebook.com/covidu'
         }
